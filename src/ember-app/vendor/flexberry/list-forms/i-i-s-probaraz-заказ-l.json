@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-probaraz-заказ-e",
+  "editForm": "i-i-s-probaraz-заказ-e",
+  "external": false,
+  "caption": "Заказ",
+  "name": "IISProbarazЗаказL",
+  "className": "ЗаказL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-probaraz-заказ",
+      "modelProjection": "ЗаказL"
+    }
+  ]
+}

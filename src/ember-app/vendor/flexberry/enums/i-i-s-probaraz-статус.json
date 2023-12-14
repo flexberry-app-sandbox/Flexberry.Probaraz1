@@ -1,0 +1,8 @@
+﻿{
+  "nameSpace": "IIS.Probaraz",
+  "className": "Статус",
+  "enumObjects": {
+    "Готов": "Готов",
+    "Принят": "Принят"
+  }
+}

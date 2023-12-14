@@ -1,0 +1,76 @@
+<h3 class="ui header">{{t "forms.i-i-s-probaraz-журнал-заказов-e.caption"}}</h3>
+
+<form class="ui form flexberry-vertical-form" role="form">
+  {{flexberry-error error=error}}
+  <div class="field">
+    <div class="flexberry-edit-panel">
+      {{#unless readonly}}
+        <button class="ui button save-button" {{action "save"}}>
+          {{t "forms.edit-form.save-button-text"}}
+        </button>
+        {{#unless model.isNew}}
+          <button class="ui button save-del-button" {{action "delete"}}>
+            {{t "forms.edit-form.delete-button-text"}}
+          </button>
+        {{/unless}}
+      {{/unless}}
+      <button class="ui button close-button" {{action "close"}}>
+        {{t "forms.edit-form.close-button-text"}}
+      </button>
+    </div>
+  </div>
+  <div class="field flexberry-validationsummary-container">
+    <div class="sixteen wide">
+      {{flexberry-validationsummary errors=(v-get validationObject "messages")}}
+    </div>
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-probaraz-журнал-заказов-e.дата-caption"}}</label>
+    {{flexberry-simpledatetime
+      type="date"
+      readonly=readonly
+      value=model.дата
+      class=(if (v-get validationModel "дата" "isInvalid") "error")
+      data-test-i-i-s-probaraz-журнал-заказов-e-дата=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "дата" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-probaraz-журнал-заказов-e.заказ-caption"}}</label>
+    {{flexberry-lookup
+      choose="showLookupDialog"
+      remove="removeLookupValue"
+      value=model.заказ
+      displayAttributeName="номерЗаказа"
+      autocomplete=true
+      relationName="заказ"
+      projection="ЗаказL"
+      title=(t "forms.i-i-s-probaraz-журнал-заказов-e.заказ-caption")
+      readonly=readonly
+      componentName="заказLookup"
+      class=(if (v-get validationModel "заказ" "isInvalid") "error")
+      data-test-i-i-s-probaraz-журнал-заказов-e-заказ=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "заказ" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=true
+      value=model.заказ.мастер.фИО
+      class=(if (v-get validationModel.заказ.мастер "фИО" "isInvalid") "error")
+      label=(t "forms.i-i-s-probaraz-журнал-заказов-e.заказ.мастер.фИО-caption")
+      data-test-i-i-s-probaraz-журнал-заказов-e-заказ-мастер-фИО=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel.заказ.мастер "фИО" "message")}}
+  </div>
+  <div class="field" data-test-i-i-s-probaraz-журнал-заказов-e-статусЗаказа="true">
+    <label>{{t "forms.i-i-s-probaraz-журнал-заказов-e.статусЗаказа-caption"}}</label>
+    {{flexberry-dropdown
+      items=(flexberry-enum "i-i-s-probaraz-статус")
+      value=model.статусЗаказа
+      class=(if (v-get validationModel "статусЗаказа" "isInvalid") "error")
+      readonly=readonly
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "статусЗаказа" "message")}}
+  </div>
+</form>

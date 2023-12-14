@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-probaraz-номенклатура-e",
+  "editForm": "i-i-s-probaraz-номенклатура-e",
+  "external": false,
+  "caption": "Номенклатура",
+  "name": "IISProbarazНоменклатураL",
+  "className": "НоменклатураL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-probaraz-номенклатура",
+      "modelProjection": "НоменклатураL"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+﻿{
+  "propertyLookup": [
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "Заказ",
+      "projection": "ЗаказL",
+      "detailModelName": null
+    }
+  ],
+  "external": false,
+  "caption": "Журнал заказов",
+  "name": "IISProbarazЖурналЗаказовE",
+  "className": "ЖурналЗаказовE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-probaraz-журнал-заказов",
+      "modelProjection": "ЖурналЗаказовE"
+    }
+  ]
+}

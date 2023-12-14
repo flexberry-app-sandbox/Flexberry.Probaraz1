@@ -1,0 +1,97 @@
+<h3 class="ui header">{{t "forms.i-i-s-probaraz-контрагент-e.caption"}}</h3>
+
+<form class="ui form flexberry-vertical-form" role="form">
+  {{flexberry-error error=error}}
+  <div class="field">
+    <div class="flexberry-edit-panel">
+      {{#unless readonly}}
+        <button class="ui button save-button" {{action "save"}}>
+          {{t "forms.edit-form.save-button-text"}}
+        </button>
+        {{#unless model.isNew}}
+          <button class="ui button save-del-button" {{action "delete"}}>
+            {{t "forms.edit-form.delete-button-text"}}
+          </button>
+        {{/unless}}
+      {{/unless}}
+      <button class="ui button close-button" {{action "close"}}>
+        {{t "forms.edit-form.close-button-text"}}
+      </button>
+    </div>
+  </div>
+  <div class="field flexberry-validationsummary-container">
+    <div class="sixteen wide">
+      {{flexberry-validationsummary errors=(v-get validationObject "messages")}}
+    </div>
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.кодКонтрагента
+      class=(if (v-get validationModel "кодКонтрагента" "isInvalid") "error")
+      label=(t "forms.i-i-s-probaraz-контрагент-e.кодКонтрагента-caption")
+      data-test-i-i-s-probaraz-контрагент-e-кодКонтрагента=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "кодКонтрагента" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.фИО
+      class=(if (v-get validationModel "фИО" "isInvalid") "error")
+      label=(t "forms.i-i-s-probaraz-контрагент-e.фИО-caption")
+      data-test-i-i-s-probaraz-контрагент-e-фИО=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "фИО" "message")}}
+  </div>
+  <div class="field" data-test-i-i-s-probaraz-контрагент-e-лицо="true">
+    <label>{{t "forms.i-i-s-probaraz-контрагент-e.лицо-caption"}}</label>
+    {{flexberry-dropdown
+      items=(flexberry-enum "i-i-s-probaraz-лица")
+      value=model.лицо
+      class=(if (v-get validationModel "лицо" "isInvalid") "error")
+      readonly=readonly
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "лицо" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.иНН
+      class=(if (v-get validationModel "иНН" "isInvalid") "error")
+      label=(t "forms.i-i-s-probaraz-контрагент-e.иНН-caption")
+      data-test-i-i-s-probaraz-контрагент-e-иНН=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "иНН" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.адрес
+      class=(if (v-get validationModel "адрес" "isInvalid") "error")
+      label=(t "forms.i-i-s-probaraz-контрагент-e.адрес-caption")
+      data-test-i-i-s-probaraz-контрагент-e-адрес=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "адрес" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.телефон
+      class=(if (v-get validationModel "телефон" "isInvalid") "error")
+      label=(t "forms.i-i-s-probaraz-контрагент-e.телефон-caption")
+      data-test-i-i-s-probaraz-контрагент-e-телефон=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "телефон" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.почта
+      class=(if (v-get validationModel "почта" "isInvalid") "error")
+      label=(t "forms.i-i-s-probaraz-контрагент-e.почта-caption")
+      data-test-i-i-s-probaraz-контрагент-e-почта=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "почта" "message")}}
+  </div>
+</form>

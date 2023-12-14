@@ -1,0 +1,39 @@
+﻿{
+  "propertyLookup": [
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "Контрагент",
+      "projection": "КонтрагентL",
+      "detailModelName": null
+    },
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "Мастер",
+      "projection": "МастерL",
+      "detailModelName": null
+    },
+    {
+      "master": "номенклатура",
+      "displayAttributeName": "товар",
+      "required": true,
+      "relationName": "РасчетЗаказа.Номенклатура",
+      "projection": "НоменклатураL",
+      "detailModelName": "i-i-s-probaraz-расчет-заказа"
+    }
+  ],
+  "external": false,
+  "caption": "Заказ",
+  "name": "IISProbarazЗаказE",
+  "className": "ЗаказE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-probaraz-заказ",
+      "modelProjection": "ЗаказE"
+    }
+  ]
+}

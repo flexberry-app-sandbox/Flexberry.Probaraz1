@@ -1,0 +1,108 @@
+<h3 class="ui header">{{t "forms.i-i-s-probaraz-заказ-e.caption"}}</h3>
+
+<form class="ui form flexberry-vertical-form" role="form">
+  {{flexberry-error error=error}}
+  <div class="field">
+    <div class="flexberry-edit-panel">
+      {{#unless readonly}}
+        <button class="ui button save-button" {{action "save"}}>
+          {{t "forms.edit-form.save-button-text"}}
+        </button>
+        {{#unless model.isNew}}
+          <button class="ui button save-del-button" {{action "delete"}}>
+            {{t "forms.edit-form.delete-button-text"}}
+          </button>
+        {{/unless}}
+      {{/unless}}
+      <button class="ui button close-button" {{action "close"}}>
+        {{t "forms.edit-form.close-button-text"}}
+      </button>
+    </div>
+  </div>
+  <div class="field flexberry-validationsummary-container">
+    <div class="sixteen wide">
+      {{flexberry-validationsummary errors=(v-get validationObject "messages")}}
+    </div>
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.номерЗаказа
+      class=(if (v-get validationModel "номерЗаказа" "isInvalid") "error")
+      label=(t "forms.i-i-s-probaraz-заказ-e.номерЗаказа-caption")
+      data-test-i-i-s-probaraz-заказ-e-номерЗаказа=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "номерЗаказа" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-probaraz-заказ-e.дата-caption"}}</label>
+    {{flexberry-simpledatetime
+      type="date"
+      readonly=readonly
+      value=model.дата
+      class=(if (v-get validationModel "дата" "isInvalid") "error")
+      data-test-i-i-s-probaraz-заказ-e-дата=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "дата" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-probaraz-заказ-e.контрагент-caption"}}</label>
+    {{flexberry-lookup
+      choose="showLookupDialog"
+      remove="removeLookupValue"
+      value=model.контрагент
+      displayAttributeName="фИО"
+      autocomplete=true
+      relationName="контрагент"
+      projection="КонтрагентL"
+      title=(t "forms.i-i-s-probaraz-заказ-e.контрагент-caption")
+      readonly=readonly
+      componentName="контрагентLookup"
+      class=(if (v-get validationModel "контрагент" "isInvalid") "error")
+      data-test-i-i-s-probaraz-заказ-e-контрагент=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "контрагент" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-probaraz-заказ-e.мастер-caption"}}</label>
+    {{flexberry-lookup
+      choose="showLookupDialog"
+      remove="removeLookupValue"
+      value=model.мастер
+      displayAttributeName="фИО"
+      autocomplete=true
+      relationName="мастер"
+      projection="МастерL"
+      title=(t "forms.i-i-s-probaraz-заказ-e.мастер-caption")
+      readonly=readonly
+      componentName="мастерLookup"
+      class=(if (v-get validationModel "мастер" "isInvalid") "error")
+      data-test-i-i-s-probaraz-заказ-e-мастер=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "мастер" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.итог
+      class=(if (v-get validationModel "итог" "isInvalid") "error")
+      label=(t "forms.i-i-s-probaraz-заказ-e.итог-caption")
+      data-test-i-i-s-probaraz-заказ-e-итог=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "итог" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-probaraz-заказ-e.расчетЗаказа-caption"}}</label>
+    {{flexberry-groupedit
+      componentName="расчетЗаказаGroupEdit"
+      mainModelProjection=modelProjection
+      modelProjection=modelProjection.attributes.расчетЗаказа
+      content=model.расчетЗаказа
+      readonly=readonly
+      orderable=false
+      class=(if (v-get validationModel "расчетЗаказа" "isInvalid") "error")
+      data-test-i-i-s-probaraz-заказ-e-расчетЗаказа=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "расчетЗаказа" "message")}}
+  </div>
+</form>

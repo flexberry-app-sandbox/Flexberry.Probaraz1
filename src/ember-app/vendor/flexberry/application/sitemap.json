@@ -1,0 +1,66 @@
+﻿{
+  "applicationCaption": "Probaraz",
+  "applicationTitle": "Probaraz",
+  "items": [
+    {
+      "link": null,
+      "menuName": "заказы",
+      "caption": "Заказы",
+      "title": "Заказы",
+      "children": [
+        {
+          "link": null,
+          "menuName": "документация",
+          "caption": "Документация",
+          "title": "Документация",
+          "children": [
+            {
+              "link": "i-i-s-probaraz-журнал-заказов-l",
+              "menuName": null,
+              "caption": "Журнал заказов",
+              "title": "Журнал заказов",
+              "children": null
+            },
+            {
+              "link": "i-i-s-probaraz-заказ-l",
+              "menuName": null,
+              "caption": "Заказ",
+              "title": "Заказ",
+              "children": null
+            }
+          ]
+        },
+        {
+          "link": null,
+          "menuName": "справочники",
+          "caption": "Справочники",
+          "title": "Справочники",
+          "children": [
+            {
+              "link": "i-i-s-probaraz-контрагент-l",
+              "menuName": null,
+              "caption": "Контрагент",
+              "title": "Контрагент",
+              "children": null
+            },
+            {
+              "link": "i-i-s-probaraz-мастер-l",
+              "menuName": null,
+              "caption": "Мастер",
+              "title": "Мастер",
+              "children": null
+            },
+            {
+              "link": "i-i-s-probaraz-номенклатура-l",
+              "menuName": null,
+              "caption": "Номенклатура",
+              "title": "Номенклатура",
+              "children": null
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "mobile": true
+}

@@ -1,0 +1,96 @@
+﻿{
+  "name": "IISProbarazНоменклатура",
+  "modelName": "i-i-s-probaraz-номенклатура",
+  "className": "Номенклатура",
+  "nameSpace": "IIS.Probaraz",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "номерТовара",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "товар",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "цена",
+      "type": "decimal",
+      "flexberryType": "double",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "НоменклатураE",
+      "modelName": "i-i-s-probaraz-номенклатура",
+      "attrs": [
+        {
+          "name": "номерТовара",
+          "caption": "Номер товара",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "товар",
+          "caption": "Товар",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "цена",
+          "caption": "Цена",
+          "hidden": false,
+          "index": 2
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    },
+    {
+      "name": "НоменклатураL",
+      "modelName": "i-i-s-probaraz-номенклатура",
+      "attrs": [
+        {
+          "name": "номерТовара",
+          "caption": "Номер товара",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "товар",
+          "caption": "Товар",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "цена",
+          "caption": "Цена",
+          "hidden": false,
+          "index": 2
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

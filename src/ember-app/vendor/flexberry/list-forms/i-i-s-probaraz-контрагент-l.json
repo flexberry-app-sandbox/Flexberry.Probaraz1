@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-probaraz-контрагент-e",
+  "editForm": "i-i-s-probaraz-контрагент-e",
+  "external": false,
+  "caption": "Контрагент",
+  "name": "IISProbarazКонтрагентL",
+  "className": "КонтрагентL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-probaraz-контрагент",
+      "modelProjection": "КонтрагентL"
+    }
+  ]
+}
